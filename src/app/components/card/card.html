@@ -1,0 +1,42 @@
+<div *ngIf="profile$ | async as profile; else loadingOrError">
+  <div class="card" *ngIf="!profile.error">
+    <div class="profile-header">
+      <div class="img-container">
+        <img [src]="profile.image" alt="Profile Image">
+      </div>
+      <h2>{{ profile.name }}</h2>
+      <p>"{{ profile.title }}"</p>
+    </div>
+
+    <div class="stats-container">
+      <div class="stat-box" *ngFor="let stat of profile.stats">
+        <span class="stat-value">{{ stat.value }}</span>
+        <span class="stat-label">{{ stat.label }}</span>
+      </div>
+    </div>
+
+    <div class="socials-container">
+      <a href="#" class="social-btn" *ngFor="let social of profile.socials">
+        <i class="icon" [class]="'icon-' + social.platform.toLowerCase()"></i>
+        {{ social.platform }}
+      </a>
+    </div>
+
+    <div class="contact-info">
+      <div class="contact-item">
+        <span class="icon">©️</span> {{ profile.email }}
+      </div>
+      <div class="contact-item">
+        <span class="icon">📞</span> {{ profile.mobile }}
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="profile.error" class="error-msg">
+    <p>Error loading data: {{ profile.message }}</p>
+  </div>
+</div>
+
+<ng-template #loadingOrError>
+  <div class="loading">Loading profile...</div>
+</ng-template>

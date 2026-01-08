@@ -1,0 +1,21 @@
+/* Import Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* Background Gradient - mimicing the blue fluid design */
+    background: linear-gradient(135deg, #1cb5e0 0%, #000851 100%);
+    /* background: radial-gradient(circle at 50% 10%, #4facfe, #00f2fe 30%, #000851 90%); */
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}

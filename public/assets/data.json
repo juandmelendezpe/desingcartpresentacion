@@ -1,0 +1,31 @@
+{
+    "name": "Juan Melendez",
+    "title": "Software Developer",
+    "stats": [
+        {
+            "label": "Projects",
+            "value": 144
+        },
+        {
+            "label": "Likes",
+            "value": 604
+        },
+        {
+            "label": "Comments",
+            "value": 44
+        }
+    ],
+    "socials": [
+        {
+            "platform": "LinkedIn",
+            "url": "#"
+        },
+        {
+            "platform": "GitHub",
+            "url": "#"
+        }
+    ],
+    "image": "logo.png",
+    "email": "juanmelendez.pe@gmail.com",
+    "mobile": "613620890"
+}
